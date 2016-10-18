@@ -21,6 +21,7 @@ class NameGUI extends JFrame implements ActionListener{
         JButton btnSample = new JButton("Sample Button");
         JButton btnQuit = new JButton("Quit");
         JButton btnSwap = new JButton("Swap");
+        JButton myBtn = new JButton("Name");
         
         //create sample textboxes
         txtWord1 = new JTextField(15);
@@ -36,12 +37,15 @@ class NameGUI extends JFrame implements ActionListener{
         btnQuit.addActionListener(this);
         btnSwap.setActionCommand("swap");  
         btnSwap.addActionListener(this);
+        myBtn.setActionCommand("name");
+        myBtn.addActionListener(this);
  
         //Add components to proper panels
         panelTop.add(btnSample);
         panelTop.add(btnQuit);
         
         //panelMiddle.add(btnYourButton);
+        panelMiddle.add(myBtn);
 
         panelBottom.add(lblSwap);
         panelBottom.add(btnSwap);
@@ -107,6 +111,9 @@ class NameGUI extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent evt) {
         //this method listens to the JFrame's events and performs appropriately
         switch (evt.getActionCommand()){
+            case "name":
+                JOptionPane.showMessageDialog(this,"Lee Thomas","Whats my name",JOptionPane.PLAIN_MESSAGE);
+                break;
             case "sample":
                 JOptionPane.showMessageDialog(this,"A Sample message dialog box","A plain message",JOptionPane.PLAIN_MESSAGE);
                 break;
