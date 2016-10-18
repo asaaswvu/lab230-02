@@ -45,7 +45,8 @@ class NameGUI extends JFrame implements ActionListener{
         //Add components to proper panels
         panelTop.add(btnSample);
         panelTop.add(btnQuit);
-	panelTop.add(btnName);
+
+	panelMiddle.add(btnName);
         
         //panelMiddle.add(btnYourButton);
 
