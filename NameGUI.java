@@ -21,6 +21,9 @@ class NameGUI extends JFrame implements ActionListener{
         JButton btnSample = new JButton("Sample Button");
         JButton btnQuit = new JButton("Quit");
         JButton btnSwap = new JButton("Swap");
+
+	// I added
+	JButton louden = new JButton("Dillon");
         
         //create sample textboxes
         txtWord1 = new JTextField(15);
@@ -36,12 +39,19 @@ class NameGUI extends JFrame implements ActionListener{
         btnQuit.addActionListener(this);
         btnSwap.setActionCommand("swap");  
         btnSwap.addActionListener(this);
+
+	// I added
+	louden.setActionCommand("Dillon");
+	louden.addActionListener(this);
  
         //Add components to proper panels
         panelTop.add(btnSample);
         panelTop.add(btnQuit);
         
         //panelMiddle.add(btnYourButton);
+
+	// I added
+	panelMiddle.add(louden);
 
         panelBottom.add(lblSwap);
         panelBottom.add(btnSwap);
@@ -108,7 +118,7 @@ class NameGUI extends JFrame implements ActionListener{
         //this method listens to the JFrame's events and performs appropriately
         switch (evt.getActionCommand()){
             case "sample":
-                JOptionPane.showMessageDialog(this,"A Sample message dialog box","A plain message",JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(this,"A Sample message dialog box","A plain 				message",JOptionPane.PLAIN_MESSAGE);
                 break;
             case "quit" :
                 System.exit(0);
@@ -120,7 +130,12 @@ class NameGUI extends JFrame implements ActionListener{
                 txtWord2.setText(tempString);
                 break;
             case "help" :
-                JOptionPane.showMessageDialog(this,"There is no help for you.","Sorry",JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this,"There is no help for 				you.","Sorry",JOptionPane.WARNING_MESSAGE);
+                break;
+
+	// I added
+	case "Dillon" :
+		JOptionPane.showMessageDialog(this,"Dillon Louden", "Hello", 				JOptionPane.WARNING_MESSAGE);
                 break;
                 
         }
