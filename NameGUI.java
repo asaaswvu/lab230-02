@@ -21,6 +21,8 @@ class NameGUI extends JFrame implements ActionListener{
         JButton btnSample = new JButton("Sample Button");
         JButton btnQuit = new JButton("Quit");
         JButton btnSwap = new JButton("Swap");
+
+	JButton btnName = new JButton("My Name");
         
         //create sample textboxes
         txtWord1 = new JTextField(15);
@@ -36,10 +38,14 @@ class NameGUI extends JFrame implements ActionListener{
         btnQuit.addActionListener(this);
         btnSwap.setActionCommand("swap");  
         btnSwap.addActionListener(this);
+
+	btnName.setActionCommand("dispName");
+	btnName.addActionListener(this);
  
         //Add components to proper panels
         panelTop.add(btnSample);
         panelTop.add(btnQuit);
+	panelTop.add(btnName);
         
         //panelMiddle.add(btnYourButton);
 
@@ -66,7 +72,7 @@ class NameGUI extends JFrame implements ActionListener{
 
         //tells java what to do when the class object closes
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setTitle("NameGui Title (how original)");
+        setTitle("This is a Creative Title");
 
         
         //get visible container and add panelMain to it
@@ -122,6 +128,10 @@ class NameGUI extends JFrame implements ActionListener{
             case "help" :
                 JOptionPane.showMessageDialog(this,"There is no help for you.","Sorry",JOptionPane.WARNING_MESSAGE);
                 break;
+
+	    case "dispName" :
+		JOptionPane.showMessageDialog(this,"My name is Matt Gramlich","Creative Title",JOptionPane.WARNING_MESSAGE);
+		break;
                 
         }
     }
