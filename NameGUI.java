@@ -23,7 +23,7 @@ import javax.swing.*;
 	 JButton btnSwap = new JButton("Swap");
 	
 		// I added
-		JButton louden = new JButton("Ahmed");
+		JButton ahmed = new JButton("Ahmed");
 	 
 	 //create sample textboxes
 	 txtWord1 = new JTextField(15);
@@ -39,19 +39,15 @@ import javax.swing.*;
 	 btnQuit.addActionListener(this);
 	 btnSwap.setActionCommand("swap"); 
 	 btnSwap.addActionListener(this);
-	
-		// I added
-		louden.setActionCommand("Ahmed");
-		louden.addActionListener(this);
+	 ahmed.setActionCommand("Ahmed");
+	 ahmed.addActionListener(this);
 	 
 	 //Add components to proper panels
 	 panelTop.add(btnSample);
 	 panelTop.add(btnQuit);
 	 
 	 //panelMiddle.add(btnYourButton);
-	
-		// I added
-		panelMiddle.add(louden);
+	 panelMiddle.add(ahmed);
 	
 	 panelBottom.add(lblSwap);
 	 panelBottom.add(btnSwap);
@@ -130,10 +126,9 @@ import javax.swing.*;
 	 txtWord2.setText(tempString);
 	 break;
 	 case "help" :
-	 JOptionPane.showMessageDialog(this,"Blah blah blah",JOptionPane.WARNING_MESSAGE);
+	 JOptionPane.showMessageDialog(this,"I'm so hungry.", "And tired", JOptionPane.WARNING_MESSAGE);
 	 break;
 	
-		
 		case "Ahmed" :
 		JOptionPane.showMessageDialog(this,"Ahmed Mian", "Hello", JOptionPane.WARNING_MESSAGE);
 	 break;
