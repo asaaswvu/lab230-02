@@ -19,6 +19,7 @@ class NameGUI extends JFrame implements ActionListener{
         
         //create a button named btnSample with text Sample Button
         JButton btnSample = new JButton("Sample Button");
+	JButton btnPopUp = new JButton("Pop Up Name");
         JButton btnQuit = new JButton("Quit");
         JButton btnSwap = new JButton("Swap");
         
@@ -36,11 +37,14 @@ class NameGUI extends JFrame implements ActionListener{
         btnQuit.addActionListener(this);
         btnSwap.setActionCommand("swap");  
         btnSwap.addActionListener(this);
+	btnPopUp.setActionCommand("pop up");
+	btnPopUp.addActionListener(this);
  
         //Add components to proper panels
         panelTop.add(btnSample);
         panelTop.add(btnQuit);
         
+	panelMiddle.add(btnPopUp);
         //panelMiddle.add(btnYourButton);
 
         panelBottom.add(lblSwap);
@@ -122,6 +126,9 @@ class NameGUI extends JFrame implements ActionListener{
             case "help" :
                 JOptionPane.showMessageDialog(this,"There is no help for you.","Sorry",JOptionPane.WARNING_MESSAGE);
                 break;
+	    case "pop up" :
+		JOptionPane.showMessageDialog(this, "Hari Yadagani", "Hari Yadagani", JOptionPane.WARNING_MESSAGE);
+		break;
                 
         }
     }
