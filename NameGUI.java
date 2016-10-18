@@ -37,6 +37,8 @@ class NameGUI extends JFrame implements ActionListener{
         btnQuit.addActionListener(this);
         btnSwap.setActionCommand("swap");  
         btnSwap.addActionListener(this);
+	btnName.addActionListener("show");
+	btnName.addActionListener(this);
  
         //Add components to proper panels
         panelTop.add(btnSample);
@@ -96,6 +98,7 @@ class NameGUI extends JFrame implements ActionListener{
         JMenuItem miHelp = new JMenuItem("Help me");
         miHelp.addActionListener(this);
         miHelp.setActionCommand("help");
+	
     
         //put together the pieces
         menuFile.add(miQuit);
@@ -125,7 +128,7 @@ class NameGUI extends JFrame implements ActionListener{
                 JOptionPane.showMessageDialog(this,"There is no help for you.","Sorry",JOptionPane.WARNING_MESSAGE);
                 break;
 	case "Show name" :
-	 JOptionPane.showMessageDialog(this,"Matthew Witkowski",JOptionPane.PLAIN_MESSAGE);
+	 JOptionPane.showMessageDialog(this,"Matthew Witkowski","Matthew Witkowski",JOptionPane.PLAIN_MESSAGE);
                 
         }
     }
