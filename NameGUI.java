@@ -18,30 +18,23 @@ class NameGUI extends JFrame implements ActionListener{
         JPanel panelBottom = new JPanel(new FlowLayout());
         
         //create a button named btnSample with text Sample Button
-        JButton btnSample = new JButton("Sample Button");
-        JButton btnQuit = new JButton("Quit");
-        JButton btnSwap = new JButton("Swap");
-        
+        JButton myButton = new JButton("Press me to find out who I am.");
+      
         //create sample textboxes
         txtWord1 = new JTextField(15);
         txtWord2 = new JTextField(15);
         
         //create a label for display
-        JLabel lblSwap = new JLabel("Swap Words!");
+        JLabel lblSwap = new JLabel("Ahmed Mian");
         
         //buttons need to say something(ActionCommand) to someone who's listening
-        btnSample.setActionCommand("sample");  //yours will have to be unique
+        btnSample.setActionCommand("name");  //yours will have to be unique
         btnSample.addActionListener(this);
-        btnQuit.setActionCommand("quit");  //your command will have to be unique
-        btnQuit.addActionListener(this);
-        btnSwap.setActionCommand("swap");  
-        btnSwap.addActionListener(this);
+     
  
         //Add components to proper panels
-        panelTop.add(btnSample);
-        panelTop.add(btnQuit);
-        
-        //panelMiddle.add(btnYourButton);
+       
+        panelMiddle.add(myButton);
 
         panelBottom.add(lblSwap);
         panelBottom.add(btnSwap);
@@ -107,22 +100,12 @@ class NameGUI extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent evt) {
         //this method listens to the JFrame's events and performs appropriately
         switch (evt.getActionCommand()){
-            case "sample":
-                JOptionPane.showMessageDialog(this,"A Sample message dialog box","A plain message",JOptionPane.PLAIN_MESSAGE);
+            case "name":
+                JOptionPane.showMessageDialog(this,"Ahmed Mian",JOptionPane.PLAIN_MESSAGE);
                 break;
             case "quit" :
                 System.exit(0);
                 break;
-            case "swap" :
-                String tempString;
-                tempString = txtWord1.getText();
-                txtWord1.setText(txtWord2.getText());
-                txtWord2.setText(tempString);
-                break;
-            case "help" :
-                JOptionPane.showMessageDialog(this,"There is no help for you.","Sorry",JOptionPane.WARNING_MESSAGE);
-                break;
-                
         }
     }
     
