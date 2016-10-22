@@ -128,7 +128,7 @@ class NameGUI extends JFrame implements ActionListener{
                 JOptionPane.showMessageDialog(this,"There is no help for you.","Sorry",JOptionPane.WARNING_MESSAGE);
                 break;
 	case "name" :
-	 JOptionPane.showMessageDialog(this,"Name","Matthew 	Witkowski",JOptionPane.PLAIN_MESSAGE);
+	 JOptionPane.showMessageDialog(this,"Addison Heavner","Addison Heavner",JOptionPane.PLAIN_MESSAGE);
 break;
                 
         }
